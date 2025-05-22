@@ -5,6 +5,8 @@ import TestPage from './pages/tests/TestPage';
 import IconPage from './pages/icon/IconPage';
 import ProductPage from './pages/product/ProductPage';
 import CreateProductPage from './pages/product/CreateProductPage';
+import AuthLayout from './layouts/AuthLayout';
+import LoginPage from './pages/auth/LoginPage';
 
 export const router = createBrowserRouter([
     {
@@ -14,6 +16,11 @@ export const router = createBrowserRouter([
             { path: 'icons', Component: IconPage },
             { path: 'products', Component: ProductPage },
             { path: 'products/create', Component: CreateProductPage },
+        ]
+    },
+    {
+        path: '/auth', Component: AuthLayout, children: [
+            { path: 'login', Component: LoginPage },
         ]
     }
 ]);

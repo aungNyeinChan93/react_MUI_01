@@ -1,8 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Container, Typography, TextField, Button } from "@mui/material";
 
 const CreateProductPage = () => {
-  const [productName, setProductName] = useState("Create Product");
+  const [productName, setProductName] = useState("");
+  const [productNameError, setProductNameError] = useState("");
+  const [description, setDescription] = useState(false);
+
+  const submitForm = () => {
+    if (productName.length === 0) {
+      setProductNameError(true);
+      setProductName("Please enter a product name");
+    } else {
+      setProductNameError(false);
+      alert(`Product Name: ${productName} \nDescription: ${description}`);
+    }
+  };
+
   return (
     <React.Fragment>
       <Container
@@ -18,10 +31,6 @@ const CreateProductPage = () => {
           CreateProductPage
         </Typography>
         <Container maxWidth="lg">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Molelaudantium quia. Repellendus corrupti.
-          </p>
           <TextField
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
@@ -29,17 +38,24 @@ const CreateProductPage = () => {
             variant="outlined"
             fullWidth
             margin="normal"
+            required
             // autofocus
             // autoCapitalize="on"
-            // error={productName === ""}
+            error={productNameError}
             sx={{ backgroundColor: "special.sec" }}
           />
-
-          <Button
+          <TextField
+            label="Product Description"
             variant="outlined"
-            color="error"
-            onClick={() => alert(`Product Name: ${productName}`)}
-          >
+            fullWidth
+            margin="normal"
+            multiline
+            rows={4}
+            sx={{ backgroundColor: "special.sec" }}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <Button variant="outlined" color="error" onClick={submitForm}>
             Submit
           </Button>
         </Container>

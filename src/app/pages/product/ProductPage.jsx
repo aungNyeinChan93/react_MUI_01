@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid, Box, Typography } from "@mui/material";
+import { Container, Grid, Box, Typography, Stack, Button } from "@mui/material";
 import { useGetProductsQuery } from "../../services/productData";
 import SingleProductCard from "../../components/product/SingleProductCard";
 
@@ -37,6 +37,33 @@ const ProductPage = () => {
         >
           Product Lists
         </Typography>
+
+        <Stack
+          direction={"row"}
+          spacing={2}
+          justifyContent="space-between"
+          alignItems={"center"}
+          sx={{
+            marginY: 2,
+          }}
+        >
+          <Typography
+            variant="h6"
+            color="special.third"
+            component="div"
+            sx={{
+              fontWeight: "bold",
+              marginY: 2,
+              textTransform: "uppercase",
+            }}
+          >
+            All Products
+          </Typography>
+
+          <Button variant="contained" color="info" href="/products/create">
+            Create
+          </Button>
+        </Stack>
 
         <Grid container spacing={3} columns={16}>
           {products &&

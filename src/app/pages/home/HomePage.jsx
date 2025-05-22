@@ -28,7 +28,7 @@ const HomePage = () => {
 
   return (
     <React.Fragment>
-      <Container maxWidth="md" disableGutters>
+      <Container maxWidth="lg">
         <CssBaseline />
 
         <h1>HomePage</h1>
@@ -80,8 +80,7 @@ const HomePage = () => {
         >
           Login
         </Button>
-        <br />
-        <br />
+
         <Button
           variant="contained"
           color="secondary"
@@ -97,6 +96,7 @@ const HomePage = () => {
           mt={"10px"}
           direction="row"
           alignItems="center"
+          justifyContent="center"
         >
           <Button
             component="label"
@@ -124,7 +124,7 @@ const HomePage = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident
         </Typography>
         <Box
-          sx={{ bgcolor: "gray", height: "100vh", borderRadius: "20px" }}
+          sx={{ bgcolor: "gray", height: "100dvh", borderRadius: "20px" }}
           textAlign={"center"}
           padding={"20px"}
           borderRadius={"10px"}

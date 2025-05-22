@@ -22,7 +22,7 @@ const ProductPage = () => {
 
   return (
     <React.Fragment>
-      <Container maxWidth="lg">
+      <Container maxWidth="lg" sx={{ marginY: 2 }}>
         <Typography
           gutterBottom
           align="center"

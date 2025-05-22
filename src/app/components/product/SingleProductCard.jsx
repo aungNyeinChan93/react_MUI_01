@@ -4,9 +4,9 @@ import { Card, CardActions, CardContent, Button } from "@mui/material";
 const SingleProductCard = ({ product }) => {
   return (
     <React.Fragment>
-      <Card sx={{ minWidth: 275, boxShadow: 4 }}>
+      <Card sx={{ minWidth: 275, boxShadow: 2, "&:hover": { boxShadow: 6 } }}>
         <CardContent>
-          <div style={{ minHeight: "350px" }}>
+          <div style={{ minHeight: "340px" }}>
             <h3>
               {product.title.length > 30
                 ? product.title.substring(0, 30) + "..."
@@ -17,9 +17,7 @@ const SingleProductCard = ({ product }) => {
               alt={product.title}
               style={{ width: "100px", height: "100px" }}
             />
-            <p>
-              {product.description && product.description.substring(0, 100)}
-            </p>
+            <p>{product.description && product.description.substring(0, 80)}</p>
             <p>Price: ${product.price}</p>
           </div>
         </CardContent>

@@ -1,7 +1,11 @@
 import React from "react";
-import { Container } from "@mui/material";
-
+import { Container, Button } from "@mui/material";
+import { useDispatch, useSelector } from "react-redux";
+import { decrease, increase } from "../../features/counter/CounterSlice";
+import { AbcRounded } from "@mui/icons-material";
 const TestPage = () => {
+  const { count } = useSelector((store) => store.counter);
+  const dispatch = useDispatch();
   return (
     <React.Fragment>
       {/*  */}
@@ -9,14 +13,35 @@ const TestPage = () => {
         maxWidth="md"
         disableGutters
         component={"div"}
-        sx={{ bgcolor: "gray", padding: "10px", borderRadius: "6px" }}
+        sx={{
+          bgcolor: "pink",
+          padding: "10px",
+          borderRadius: "6px",
+          textAlign: "center",
+        }}
       >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel accusamus
-          temporibus expedita quos culpa nobis ab eos eius, quia, molestias
-          voluptatibus, optio architecto suscipit labore sapiente adipisci
-          blanditiis? Quam, aperiam.
-        </p>
+        <p>{count}</p>
+        <Button
+          disabled={count === 50}
+          sx={{ margin: "10px" }}
+          startIcon={<AbcRounded fontSize="large" color="error" />}
+          variant="outlined"
+          color="primary"
+          size="large"
+          onClick={() => dispatch(increase())}
+        >
+          +
+        </Button>
+        <Button
+          sx={{ margin: "10px" }}
+          startIcon={<AbcRounded fontSize="large" color="error" />}
+          variant="outlined"
+          color="primary"
+          size="large"
+          onClick={() => dispatch(decrease())}
+        >
+          -
+        </Button>
       </Container>
     </React.Fragment>
   );

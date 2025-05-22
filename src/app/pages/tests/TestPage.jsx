@@ -1,8 +1,9 @@
 import React from "react";
-import { Container, Button } from "@mui/material";
+import { Container, Button, makeStyles } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { decrease, increase } from "../../features/counter/CounterSlice";
 import { AbcRounded } from "@mui/icons-material";
+
 const TestPage = () => {
   const { count } = useSelector((store) => store.counter);
   const dispatch = useDispatch();
@@ -10,39 +11,48 @@ const TestPage = () => {
     <React.Fragment>
       {/*  */}
       <Container
-        maxWidth="md"
+        maxWidth="xs"
         disableGutters
         component={"div"}
         sx={{
-          bgcolor: "pink",
+          // bgcolor: "primary.dark",
+          bgcolor: "special.main",
+          "&:hover": { bgcolor: "special.third" },
           padding: "10px",
           borderRadius: "6px",
           textAlign: "center",
         }}
       >
         <p>{count}</p>
+
         <Button
           disabled={count === 50}
-          sx={{ margin: "10px" }}
           startIcon={<AbcRounded fontSize="large" color="error" />}
           variant="outlined"
-          color="primary"
+          color="special"
           size="large"
+          sx={{ margin: "10px" }}
           onClick={() => dispatch(increase())}
         >
           +
         </Button>
         <Button
-          sx={{ margin: "10px" }}
           startIcon={<AbcRounded fontSize="large" color="error" />}
           variant="outlined"
-          color="primary"
+          color="special"
           size="large"
+          sx={{ margin: "10px" }}
           onClick={() => dispatch(decrease())}
         >
           -
         </Button>
       </Container>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam
+        repudiandae, quis reiciendis, eos quibusdam mollitia sit vel cum
+        doloremque harum soluta perferendis accusantium consequuntur asperiores
+        enim a necessitatibus vero nobis.
+      </p>
     </React.Fragment>
   );
 };

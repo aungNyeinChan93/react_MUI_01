@@ -1,20 +1,9 @@
 import React from "react";
-import { Container, Stack, Box, Grid } from "@mui/material";
+import { Container, Stack, Box, Grid, Button } from "@mui/material";
 import { pink, amber } from "@mui/material/colors";
 import { LoginRounded, Adb } from "@mui/icons-material";
 
-// const useStyles = makeStyles({
-//   btn: {
-//     backgroundColor: pink[500],
-//     color: "white",
-//     "&:hover": {
-//       backgroundColor: pink[700],
-//     },
-//   },
-// });
-
 const IconPage = () => {
-  //   const classes = useStyles();
   return (
     <React.Fragment>
       <Container

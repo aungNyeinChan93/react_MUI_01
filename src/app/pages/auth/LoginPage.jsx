@@ -1,7 +1,16 @@
-import React from "react";
-import { Container, Typography, TextField, Button } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  FormControl,
+  Checkbox,
+  FormControlLabel,
+} from "@mui/material";
 
 const LoginPage = () => {
+  const [remember, setRemember] = useState(false);
   return (
     <React.Fragment>
       <Container
@@ -34,6 +43,18 @@ const LoginPage = () => {
             required
             sx={{ backgroundColor: "special.sec" }}
           />
+          <FormControl>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={remember}
+                  onChange={(e) => setRemember(e.target.checked)}
+                />
+              }
+              label="remember me"
+              sx={{ color: "blue" }}
+            />
+          </FormControl>
           <Button
             variant="contained"
             color="secondary"

@@ -1,4 +1,4 @@
-import { createTheme, ThemeProvider } from '@mui/material';
+import { createTheme } from '@mui/material';
 import { blueGrey, cyan, orange } from '@mui/material/colors'
 
 export const MasterTheme = createTheme({
@@ -21,7 +21,7 @@ export const MasterTheme = createTheme({
     },
     typography: {
         fontFamily: 'Quicksand, monospace',
-        // fontSize: '4rem',
+        // fontSize: '8rem',
         fontWeightBold: 700,
         fontWeightMedium: 500,
         fontWeightRegular: 400,

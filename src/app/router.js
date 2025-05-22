@@ -7,6 +7,7 @@ import ProductPage from './pages/product/ProductPage';
 import CreateProductPage from './pages/product/CreateProductPage';
 import AuthLayout from './layouts/AuthLayout';
 import LoginPage from './pages/auth/LoginPage';
+import NotePage from './pages/notes/NotePage';
 
 export const router = createBrowserRouter([
     {
@@ -16,6 +17,7 @@ export const router = createBrowserRouter([
             { path: 'icons', Component: IconPage },
             { path: 'products', Component: ProductPage },
             { path: 'products/create', Component: CreateProductPage },
+            { path: 'notes', Component: NotePage },
         ]
     },
     {

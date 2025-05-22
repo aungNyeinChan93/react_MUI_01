@@ -3,9 +3,9 @@
 @import "tailwindcss";
 
 :root {
-  /* font-family: "Monsieur La Doulaise";
+  font-family: "Monsieur La Doulaise";
+  font-family: "Roboto", sans-serif;
   font-family: "Noto Serif";
-  font-family: "Roboto", sans-serif; */
   font-family: "Quicksand";
   font-weight: 500;
   --color-primary: #646cff;

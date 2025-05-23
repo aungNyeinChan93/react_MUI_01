@@ -8,6 +8,7 @@ import CreateProductPage from './pages/product/CreateProductPage';
 import AuthLayout from './layouts/AuthLayout';
 import LoginPage from './pages/auth/LoginPage';
 import NotePage from './pages/notes/NotePage';
+import RecipePage from './pages/recipes/RecipePage';
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,7 @@ export const router = createBrowserRouter([
             { path: 'products', Component: ProductPage },
             { path: 'products/create', Component: CreateProductPage },
             { path: 'notes', Component: NotePage },
+            { path: 'recipes', Component: RecipePage },
         ]
     },
     {

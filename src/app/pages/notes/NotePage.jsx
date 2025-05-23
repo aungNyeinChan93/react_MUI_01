@@ -56,6 +56,7 @@ const NotePage = () => {
             </Button>
           </Typography>
         </Stack>
+
         <Container
           maxWidth="lg"
           disableGutters
@@ -66,44 +67,42 @@ const NotePage = () => {
             borderRadius: 2,
           }}
         >
-          <div>
-            {notes?.map((note) => {
-              return (
-                <Card
-                  key={note.id}
-                  sx={{
-                    minWidth: 275,
-                    boxShadow: 2,
-                    "&:hover": { boxShadow: 10 },
-                    marginY: 2,
-                    bgcolor: "special.sec",
-                    borderRadius: 2,
-                  }}
-                >
-                  <CardContent>
-                    <Typography variant="h6" component={"p"} color="dark">
-                      {note.title}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      color="error"
-                      sx={{ marginY: 1, textTransform: "capitalize" }}
-                    >
-                      {note.category}
-                    </Typography>
-                    <Typography
-                      variant="subtitle1"
-                      color="text.secondary"
-                      component={"p"}
-                      sx={{ marginY: 1 }}
-                    >
-                      {note.details}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
+          {notes?.map((note) => {
+            return (
+              <Card
+                key={note.id}
+                sx={{
+                  minWidth: 275,
+                  boxShadow: 2,
+                  "&:hover": { boxShadow: 10 },
+                  marginY: 2,
+                  bgcolor: "special.sec",
+                  borderRadius: 2,
+                }}
+              >
+                <CardContent>
+                  <Typography variant="h6" component={"p"} color="dark">
+                    {note.title}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="error"
+                    sx={{ marginY: 1, textTransform: "capitalize" }}
+                  >
+                    {note.category}
+                  </Typography>
+                  <Typography
+                    variant="subtitle1"
+                    color="text.secondary"
+                    component={"p"}
+                    sx={{ marginY: 1 }}
+                  >
+                    {note.details}
+                  </Typography>
+                </CardContent>
+              </Card>
+            );
+          })}
         </Container>
       </Container>
     </React.Fragment>

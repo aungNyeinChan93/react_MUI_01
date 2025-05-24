@@ -8,6 +8,7 @@ import {
   Box,
   Rating,
   Stack,
+  Button,
 } from "@mui/material";
 import { useGetRecipesQuery } from "../../services/recipeData";
 
@@ -18,14 +19,30 @@ const RecipePage = () => {
   return (
     <React.Fragment>
       <Container maxWidth="lg" disableGutters sx={{ padding: 2 }}>
-        <Typography
-          variant="h4"
-          component={"h4"}
-          align="center"
-          color="primary"
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
         >
-          All Recipe
-        </Typography>
+          <Typography
+            variant="h4"
+            component={"h4"}
+            align="center"
+            color="primary"
+          >
+            All Recipe
+          </Typography>
+          <Box component={"div"}>
+            <Button
+              href="/recipes/create"
+              variant="outlined"
+              color="info"
+              size="medium"
+            >
+              Create Recipe
+            </Button>
+          </Box>
+        </Stack>
         {isLoading && <Typography>Loading...</Typography>}
         {error && <Typography>Error: {error.message}</Typography>}
         {data && data?.recipes && data?.recipes.length > 0 ? (
@@ -40,7 +57,7 @@ const RecipePage = () => {
                     boxShadow: 1,
                     "&:hover": {
                       boxShadow: 3,
-                      transform: "scale(1.02)",
+                      transform: "scale(1.03)",
                       transition: "0.3s",
                     },
                     minHeight: "400px",
@@ -48,7 +65,7 @@ const RecipePage = () => {
                 >
                   <CardContent>
                     <Typography variant="h6" color="primary.dark">
-                      {recipe.name}
+                      {recipe.name && recipe.name.substring(0, 20)}
                     </Typography>
                     <Typography
                       variant="overline"

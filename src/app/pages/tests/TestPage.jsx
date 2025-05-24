@@ -3,10 +3,19 @@ import { Container, Button, makeStyles } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { decrease, increase } from "../../features/counter/CounterSlice";
 import { AbcRounded } from "@mui/icons-material";
+import { useGetData } from "../../hooks/useGetData";
 
 const TestPage = () => {
   const { count } = useSelector((store) => store.counter);
   const dispatch = useDispatch();
+
+  const {
+    data: { todos },
+    isLoading,
+    isError,
+  } = useGetData(`https://dummyjson.com/todos`);
+  console.log(todos);
+
   return (
     <React.Fragment>
       {/*  */}

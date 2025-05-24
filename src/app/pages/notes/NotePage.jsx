@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Button,
   Container,
   Stack,
   Typography,
   Card,
-  CardActions,
   CardContent,
 } from "@mui/material";
-import { notes } from "../../../../data/db.json";
+// import { notes } from "../../../../data/db.json";
+import { useGetData } from "../../hooks/useGetData";
 
 const NotePage = () => {
+  const {
+    data: notes,
+    isLoading,
+    isError,
+  } = useGetData(`http://localhost:3001/notes`);
+
   return (
     <React.Fragment>
       <Container

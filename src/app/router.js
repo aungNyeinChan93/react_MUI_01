@@ -10,6 +10,7 @@ import LoginPage from './pages/auth/LoginPage';
 import NotePage from './pages/notes/NotePage';
 import RecipePage from './pages/recipes/RecipePage';
 import CreateRecipePage from './pages/recipes/CreateRecipePage';
+import CreateNotePage from './pages/notes/CreateNotePage';
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +21,7 @@ export const router = createBrowserRouter([
             { path: 'products', Component: ProductPage },
             { path: 'products/create', Component: CreateProductPage },
             { path: 'notes', Component: NotePage },
+            { path: 'notes/create', Component: CreateNotePage },
             { path: 'recipes', Component: RecipePage },
             { path: 'recipes/create', Component: CreateRecipePage },
         ]

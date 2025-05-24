@@ -1,106 +1,160 @@
 {
-    "notes": [
-        {
-            "title": "Yoshi's birthday bash",
-            "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            "category": "reminders",
-            "id": 1
-        },
-        {
-            "title": "Complete my ninja training",
-            "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-            "category": "work",
-            "id": 2
-        },
-        {
-            "title": "Order a pizza!",
-            "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-            "category": "todos",
-            "id": 3
-        },
-        {
-            "title": "Read a new book",
-            "details": "Pick up a new book from the library and read at least 50 pages.",
-            "category": "personal",
-            "id": 4
-        },
-        {
-            "title": "Team meeting",
-            "details": "Weekly sync with the team to discuss project progress and blockers.",
-            "category": "work",
-            "id": 5
-        },
-        {
-            "title": "Buy groceries",
-            "details": "Milk, eggs, bread, and fresh vegetables for the week.",
-            "category": "todos",
-            "id": 6
-        },
-        {
-            "title": "Call Mom",
-            "details": "Check in and see how she's doing.",
-            "category": "reminders",
-            "id": 7
-        },
-        {
-            "title": "Morning Jog",
-            "details": "Run 3 miles around the park.",
-            "category": "personal",
-            "id": 8
-        },
-        {
-            "title": "Dentist Appointment",
-            "details": "Routine checkup at 10:00 AM.",
-            "category": "reminders",
-            "id": 9
-        },
-        {
-            "title": "Finish React Project",
-            "details": "Complete the UI components and push to GitHub.",
-            "category": "work",
-            "id": 10
-        },
-        {
-            "title": "Plan Vacation",
-            "details": "Research destinations and book flights.",
-            "category": "personal",
-            "id": 11
-        },
-        {
-            "title": "Pay Utility Bills",
-            "details": "Electricity and water bills due this week.",
-            "category": "todos",
-            "id": 12
-        },
-        {
-            "title": "Grocery Shopping",
-            "details": "Buy fruits, snacks, and cleaning supplies.",
-            "category": "todos",
-            "id": 13
-        },
-        {
-            "title": "Update Resume",
-            "details": "Add recent projects and update skills section.",
-            "category": "work",
-            "id": 14
-        },
-        {
-            "title": "Movie Night",
-            "details": "Watch a new release with friends.",
-            "category": "personal",
-            "id": 15
-        },
-        {
-            "title": "Car Service",
-            "details": "Annual maintenance at the service center.",
-            "category": "reminders",
-            "id": 16
-        },
-        {
-            "title": "Organize Desk",
-            "details": "Clean and arrange workspace for better productivity.",
-            "category": "todos",
-            "id": 17
-        }
-    ]
+  "notes": [
+    {
+      "title": "Yoshi's birthday bash",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "reminders",
+      "id": "1"
+    },
+    {
+      "title": "Complete my ninja training",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
+      "category": "work",
+      "id": "2"
+    },
+    {
+      "title": "Order a pizza!",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "todos",
+      "id": "3"
+    },
+    {
+      "title": "Read a new book",
+      "details": "Pick up a new book from the library and read at least 50 pages.",
+      "category": "personal",
+      "id": "4"
+    },
+    {
+      "title": "Team meeting",
+      "details": "Weekly sync with the team to discuss project progress and blockers.",
+      "category": "work",
+      "id": "5"
+    },
+    {
+      "title": "Buy groceries",
+      "details": "Milk, eggs, bread, and fresh vegetables for the week.",
+      "category": "todos",
+      "id": "6"
+    },
+    {
+      "title": "Call Mom",
+      "details": "Check in and see how she's doing.",
+      "category": "reminders",
+      "id": "7"
+    },
+    {
+      "title": "Morning Jog",
+      "details": "Run 3 miles around the park.",
+      "category": "personal",
+      "id": "8"
+    },
+    {
+      "title": "Dentist Appointment",
+      "details": "Routine checkup at 10:00 AM.",
+      "category": "reminders",
+      "id": "9"
+    },
+    {
+      "title": "Finish React Project",
+      "details": "Complete the UI components and push to GitHub.",
+      "category": "work",
+      "id": "10"
+    },
+    {
+      "title": "Plan Vacation",
+      "details": "Research destinations and book flights.",
+      "category": "personal",
+      "id": "11"
+    },
+    {
+      "title": "Pay Utility Bills",
+      "details": "Electricity and water bills due this week.",
+      "category": "todos",
+      "id": "12"
+    },
+    {
+      "title": "Grocery Shopping",
+      "details": "Buy fruits, snacks, and cleaning supplies.",
+      "category": "todos",
+      "id": "13"
+    },
+    {
+      "title": "Update Resume",
+      "details": "Add recent projects and update skills section.",
+      "category": "work",
+      "id": "14"
+    },
+    {
+      "title": "Movie Night",
+      "details": "Watch a new release with friends.",
+      "category": "personal",
+      "id": "15"
+    },
+    {
+      "title": "Car Service",
+      "details": "Annual maintenance at the service center.",
+      "category": "reminders",
+      "id": "16"
+    },
+    {
+      "title": "Organize Desk",
+      "details": "Clean and arrange workspace for better productivity.",
+      "category": "todos",
+      "id": "17"
+    },
+    {
+      "id": 0.9077459787298223,
+      "title": "Incididunt libero al",
+      "detail": "Proident sed nihil ",
+      "category": "Commodi sit ipsum "
+    },
+    {
+      "id": "0.8119077736378855",
+      "title": "Commodo non corrupti",
+      "detail": "Unde deserunt aut di",
+      "category": "Sed qui vel dignissi"
+    },
+    {
+      "id": "0.389628494315683",
+      "title": "test",
+      "detail": "test detail",
+      "category": "test ctegory"
+    },
+    {
+      "id": "0.9395249805884893",
+      "title": "Dolore ea vitae inci",
+      "detail": "Omnis quia maxime ut",
+      "category": "Blanditiis est imped"
+    },
+    {
+      "id": "0.307523744448313",
+      "title": "Elit iusto corporis",
+      "detail": "Culpa fugiat nostrud",
+      "category": "Recusandae Odit arc"
+    },
+    {
+      "id": "0.9864187138940489",
+      "title": "Deserunt qui ut aut ",
+      "detail": "Dignissimos quis inc",
+      "category": "Minus porro nobis mo"
+    },
+    {
+      "id": "0.694943339009179",
+      "title": "Dolore omnis volupta",
+      "detail": "Aut excepteur explic",
+      "category": "Velit unde facere al"
+    },
+    {
+      "id": "0.5116594736540054",
+      "title": "Quis sint et tempori",
+      "detail": "Voluptatem Est aut ",
+      "category": "In nihil labore comm"
+    },
+    {
+      "id": "0.5523662403829377",
+      "title": "Molestiae magnam ver",
+      "detail": "Ex ad incidunt reru",
+      "category": "Culpa occaecat aut q"
+    }
+  ]
 }

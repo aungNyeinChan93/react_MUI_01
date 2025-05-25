@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 
-export const usePostData = () => {
+export const usePostData = (to = null) => {
   const [data, setData] = useState(null);
   const [isError, setError] = useState(null);
   const [isLoading, setLoading] = useState(false);
   const [isSuccess, setSuccess] = useState(false);
+  const navigate = useNavigate();
 
   const createData = async (url, payload) => {
     setLoading(true);
@@ -28,6 +30,7 @@ export const usePostData = () => {
     } finally {
       setLoading(false);
       setSuccess(true);
+      navigate(to);
     }
   };
 

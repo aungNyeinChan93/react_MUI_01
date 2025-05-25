@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { usePostData } from "../../hooks/usePostData";
-import { useGetData } from "../../hooks/useGetData";
 import {
   Container,
   Box,
@@ -8,12 +7,15 @@ import {
   Stack,
   Button,
   Typography,
+  Radio,
+  FormControl,
+  RadioGroup,
+  FormControlLabel,
 } from "@mui/material";
-import { useNavigate } from "react-router";
 
 const CreateNotePage = () => {
-  const navigate = useNavigate();
-  const { createData, data, isError, isLoading, isSuccess } = usePostData();
+  const { createData, data, isError, isLoading, isSuccess } =
+    usePostData("/notes");
   const [title, setTitle] = useState("");
   const [detail, setDetail] = useState("");
   const [category, setCategory] = useState("");
@@ -22,12 +24,11 @@ const CreateNotePage = () => {
     e.preventDefault();
     const newNoteData = {
       title,
-      detail,
+      details: detail,
       category,
       id: Math.random().toString(),
     };
     await createData(`http://localhost:3001/notes`, newNoteData);
-    navigate(`/notes`);
   };
 
   return (
@@ -66,16 +67,40 @@ const CreateNotePage = () => {
             required
             sx={{ backgroundColor: "special.sec" }}
           />
+          {detail}
           <TextField
+            disabled
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             label="category"
             variant="outlined"
             fullWidth
             margin="normal"
-            required
             sx={{ backgroundColor: "special.sec" }}
           />
+          <FormControl>
+            <RadioGroup
+              row
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+            >
+              <FormControlLabel
+                control={<Radio />}
+                value={"1"}
+                label="Category-1"
+              />
+              <FormControlLabel
+                control={<Radio />}
+                value="2"
+                label="Category-2"
+              />
+              <FormControlLabel
+                control={<Radio />}
+                value="3"
+                label="Category-3"
+              />
+            </RadioGroup>
+          </FormControl>
 
           <Button
             variant="contained"

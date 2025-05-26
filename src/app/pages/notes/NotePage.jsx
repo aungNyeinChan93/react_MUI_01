@@ -6,9 +6,12 @@ import {
   Typography,
   Card,
   CardContent,
+  IconButton,
 } from "@mui/material";
 // import { notes } from "../../../../data/db.json";
 import { useGetData } from "../../hooks/useGetData";
+import { DeleteOutlineRounded } from "@mui/icons-material";
+import { useDeleteData } from "../../hooks/useDeleteData";
 
 const NotePage = () => {
   const {
@@ -16,6 +19,13 @@ const NotePage = () => {
     isLoading,
     isError,
   } = useGetData(`http://localhost:3001/notes`);
+
+  const { destroyData, data: deleteData } = useDeleteData();
+
+  const deleteNote = async (id) => {
+    await destroyData(`http://localhost:3001/notes`, id);
+  };
+  console.log(deleteData);
 
   return (
     <React.Fragment>
@@ -87,9 +97,18 @@ const NotePage = () => {
                 }}
               >
                 <CardContent>
-                  <Typography variant="h6" component={"p"} color="dark">
-                    {note.title}
-                  </Typography>
+                  <Stack
+                    direction={"row"}
+                    justifyContent={"space-between"}
+                    alignItems={"center"}
+                  >
+                    <Typography variant="h6" component={"p"} color="dark">
+                      {note.title}
+                    </Typography>
+                    <IconButton onClick={() => deleteNote(note.id)}>
+                      <DeleteOutlineRounded color="error" fontSize="medium" />
+                    </IconButton>
+                  </Stack>
                   <Typography
                     variant="subtitle1"
                     color="error"

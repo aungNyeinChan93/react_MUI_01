@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "@mui/material";
 import { Link } from "react-router";
+import TestDrawer from "../tests/TestDrawer";
 
 const Navbar = () => {
   return (
@@ -103,6 +104,7 @@ const Navbar = () => {
                   >
                     Register
                   </a>
+                  <TestDrawer />
                 </div>
 
                 <button className="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">

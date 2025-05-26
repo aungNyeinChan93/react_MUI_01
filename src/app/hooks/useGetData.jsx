@@ -23,7 +23,7 @@ export const useGetData = (endPonit) => {
 
   useEffect(() => {
     fetchData(endPonit);
-  }, [endPonit]);
+  }, []);
 
   return { data, isError, isLoading };
 };

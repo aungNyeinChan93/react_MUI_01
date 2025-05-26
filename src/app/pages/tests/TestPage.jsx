@@ -11,12 +11,14 @@ import {
   CardMedia,
   CardContent,
   CardActions,
+  IconButton,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { decrease, increase } from "../../features/counter/CounterSlice";
-import { AbcRounded } from "@mui/icons-material";
+import { AbcRounded, DeleteOutline } from "@mui/icons-material";
 import { useGetData } from "../../hooks/useGetData";
 import TestCard from "../../components/tests/TestCard";
+import TestDrawer from "../../components/tests/TestDrawer";
 
 const TestPage = () => {
   const { count } = useSelector((store) => store.counter);
@@ -161,6 +163,19 @@ const TestPage = () => {
                       },
                     }}
                   >
+                    <CardHeader
+                      title={
+                        <Typography variant="h6" color="info">
+                          This is Header Title
+                        </Typography>
+                      }
+                      action={
+                        <IconButton>
+                          <DeleteOutline color="error" />
+                        </IconButton>
+                      }
+                      subheader={"this is subHeader !!!"}
+                    />
                     <CardMedia
                       component={"img"}
                       image="/images/placeholder.png"
@@ -172,7 +187,7 @@ const TestPage = () => {
                       <Typography variant="h6" align="center" color="error">
                         Card {item}
                       </Typography>
-                      <Typography variant="subtitle1">
+                      <Typography variant="subtitle1" color="secondary">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Odit nesciunt vel culpa distinctio consequatur suscipit
                         deleniti sed aliquam aut saepe?
@@ -189,6 +204,7 @@ const TestPage = () => {
             })}
           </Grid>
         </section>
+        <TestDrawer />
       </Container>
     </React.Fragment>
   );

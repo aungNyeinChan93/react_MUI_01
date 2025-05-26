@@ -88,18 +88,18 @@ const CreateNotePage = () => {
             >
               <FormControlLabel
                 control={<Radio />}
-                value={"1"}
-                label="Category-1"
+                value={"Work"}
+                label="work"
               />
               <FormControlLabel
                 control={<Radio />}
-                value="2"
-                label="Category-2"
+                value="Todos"
+                label="todos"
               />
               <FormControlLabel
                 control={<Radio />}
-                value="3"
-                label="Category-3"
+                value="Personal"
+                label="personal"
               />
             </RadioGroup>
           </FormControl>

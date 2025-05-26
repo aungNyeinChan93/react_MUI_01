@@ -15,7 +15,7 @@ import SecondaryLayout from './layouts/SecondaryLayout';
 
 export const router = createBrowserRouter([
     {
-        path: "/", Component: MasterLayout, children: [
+        path: "/", Component: SecondaryLayout, children: [
             { index: true, Component: HomePage },
             { path: 'tests', Component: TestPage },
             { path: 'icons', Component: IconPage },

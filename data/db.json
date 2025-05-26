@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "title": "Yoshi's birthday bash",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "reminders",
-      "id": "1"
-    },
-    {
       "title": "Complete my ninja training",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
       "category": "work",
@@ -115,16 +109,16 @@
       "category": "Sed qui vel dignissi"
     },
     {
-      "id": "0.9395249805884893",
-      "title": "Dolore ea vitae inci",
-      "detail": "Omnis quia maxime ut",
-      "category": "Blanditiis est imped"
+      "id": "0.14720901292669597",
+      "title": "Qui mollit ipsum si",
+      "details": "Numquam id aut vero ",
+      "category": "Personal"
     },
     {
-      "id": "0.307523744448313",
-      "title": "Elit iusto corporis",
-      "detail": "Culpa fugiat nostrud",
-      "category": "Recusandae Odit arc"
+      "id": "0.8009244277131445",
+      "title": "Irure consequatur d",
+      "details": "Distinctio Irure qu",
+      "category": "Work"
     }
   ]
 }

@@ -6,17 +6,17 @@ import Navbar from "../components/base/Navbar";
 const SecondaryLayout = () => {
   return (
     <React.Fragment>
-      <div style={{ marginLeft: "230px" }}>
-        <Navbar />
-      </div>
+      <div style={{ marginLeft: "230px" }}>{/* <Navbar /> */}</div>
+
       <div
         style={{
           display: "flex",
-          marginTop: "10px",
+          marginTop: "20px",
         }}
       >
         <SideMenuBar />
-        <div style={{ marginLeft: "230px  " }}>
+
+        <div style={{ marginLeft: "230px" }}>
           <Outlet />
         </div>
       </div>

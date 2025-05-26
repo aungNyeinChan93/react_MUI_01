@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "@mui/material";
 import { Link } from "react-router";
 import TestDrawer from "../tests/TestDrawer";
+import { menuLists } from "../../helpers/MenuLists";
 
 const Navbar = () => {
   return (
@@ -27,65 +28,18 @@ const Navbar = () => {
             <div className="flex flex-1 items-center justify-end md:justify-between">
               <nav aria-label="Global" className="hidden md:block">
                 <ul className="flex items-center gap-6 text-sm">
-                  <li>
-                    <Link
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      to="/products"
-                    >
-                      {" "}
-                      Products{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      to="/notes"
-                    >
-                      {" "}
-                      {"Notes"}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      to="/recipes"
-                    >
-                      {" "}
-                      Recipes{" "}
-                    </Link>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href="#"
-                    >
-                      {" "}
-                      Services{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href="#"
-                    >
-                      {" "}
-                      Projects{" "}
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-gray-500/75"
-                      href="#"
-                    >
-                      {" "}
-                      Blog{" "}
-                    </a>
-                  </li>
+                  {menuLists?.map((menu) => {
+                    return (
+                      <li>
+                        <Link
+                          className="text-gray-500 transition hover:text-gray-500/75"
+                          to={menu.path}
+                        >
+                          {menu.name}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </nav>
 
@@ -104,6 +58,7 @@ const Navbar = () => {
                   >
                     Register
                   </a>
+
                   <TestDrawer />
                 </div>
 

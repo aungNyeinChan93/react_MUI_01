@@ -39,7 +39,7 @@ export default function TestDrawer() {
           >
             MUI Project
           </Typography>
-          <List sx={{ width: 200 }}>
+          <List sx={{ width: 220 }}>
             <Link to={"/"}>
               <ListItem button>
                 <HomeMiniOutlined fontSize="medium" sx={{ marginRight: 1 }} />

@@ -19,6 +19,7 @@ import { AbcRounded, DeleteOutline } from "@mui/icons-material";
 import { useGetData } from "../../hooks/useGetData";
 import TestCard from "../../components/tests/TestCard";
 import TestDrawer from "../../components/tests/TestDrawer";
+import SideMenuBar from "../../components/base/SideMenuBar";
 
 const TestPage = () => {
   const { count } = useSelector((store) => store.counter);
@@ -205,6 +206,7 @@ const TestPage = () => {
           </Grid>
         </section>
         <TestDrawer />
+        <SideMenuBar />
       </Container>
     </React.Fragment>
   );

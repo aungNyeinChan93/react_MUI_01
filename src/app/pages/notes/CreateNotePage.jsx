@@ -34,13 +34,15 @@ const CreateNotePage = () => {
   return (
     <React.Fragment>
       <Container
-        maxWidth="xs"
+        maxWidth="sm"
         disableGutters
         sx={{
-          marginY: 20,
+          // marginY: 20,
           backgroundColor: "primary.light",
           padding: 2,
           borderRadius: 2,
+          // marginLeft: "19rem",
+          // marginY: "5rem",
         }}
       >
         <Typography color="secondary.dark" align="center" variant="h5">

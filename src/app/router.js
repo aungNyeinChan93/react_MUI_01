@@ -11,6 +11,7 @@ import NotePage from './pages/notes/NotePage';
 import RecipePage from './pages/recipes/RecipePage';
 import CreateRecipePage from './pages/recipes/CreateRecipePage';
 import CreateNotePage from './pages/notes/CreateNotePage';
+import SecondaryLayout from './layouts/SecondaryLayout';
 
 export const router = createBrowserRouter([
     {

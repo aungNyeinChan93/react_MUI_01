@@ -20,6 +20,17 @@ import { useGetData } from "../../hooks/useGetData";
 import TestCard from "../../components/tests/TestCard";
 import TestDrawer from "../../components/tests/TestDrawer";
 import SideMenuBar from "../../components/base/SideMenuBar";
+import { styled } from "@mui/material/styles";
+
+const TestStyleComponent = styled("h1")(({ theme }) => ({
+  background: theme.palette.special.main,
+  color: theme.palette.secondary.main,
+  fontSize: "2rem",
+  textAlign: "center",
+  padding: "20px",
+  margin: "20px auto",
+  borderRadius: "10px",
+}));
 
 const TestPage = () => {
   const { count } = useSelector((store) => store.counter);
@@ -36,7 +47,7 @@ const TestPage = () => {
     <React.Fragment>
       {/*  */}
       <Container
-        maxWidth="xs"
+        maxWidth="lg"
         disableGutters
         component={"div"}
         sx={{
@@ -46,6 +57,7 @@ const TestPage = () => {
           padding: "10px",
           borderRadius: "6px",
           textAlign: "center",
+          margin: { xs: "20px auto", sm: "20px 0" },
         }}
       >
         <p>{count}</p>
@@ -207,6 +219,15 @@ const TestPage = () => {
         </section>
         <TestDrawer />
         <SideMenuBar />
+
+        <TestStyleComponent>
+          This is styled Component!
+          <TestStyleComponent sx={{ color: "red", fontSize: "1.5rem" }}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod minus
+            eum natus cupiditate recusandae quam necessitatibus eius dolorum
+            architecto quasi?
+          </TestStyleComponent>
+        </TestStyleComponent>
       </Container>
     </React.Fragment>
   );

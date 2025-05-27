@@ -11,6 +11,7 @@ import {
 import { Css, LoginTwoTone, LogoutRounded } from "@mui/icons-material";
 import { styled } from "@mui/material/styles";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
+import Banner from "../../components/base/Banner";
 
 const HomePage = () => {
   const ml = "100px";
@@ -28,7 +29,7 @@ const HomePage = () => {
 
   return (
     <React.Fragment>
-      <Container maxWidth="lg">
+      {/* <Container maxWidth="lg">
         <CssBaseline />
 
         <h1>HomePage</h1>
@@ -132,6 +133,9 @@ const HomePage = () => {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium
           sed maiores optio?
         </Box>
+      </Container> */}
+      <Container maxWidth="lg">
+        <Banner />
       </Container>
     </React.Fragment>
   );

@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material';
-import { blueGrey, cyan, orange } from '@mui/material/colors'
+import { blueGrey, cyan, orange, blue, lime, indigo } from '@mui/material/colors'
 
 export const MasterTheme = createTheme({
     palette: {
@@ -9,14 +9,21 @@ export const MasterTheme = createTheme({
             dark: '#006400',
         },
         secondary: {
-            main: '#dc004e',
+            // main: orange[300],
+            main: indigo[400],
             light: '#f50057',
             dark: '#c51162',
         },
         special: {
-            main: '#FFC0CB',
+            main: orange[500],
+            // light: orange[300],
             sec: blueGrey[100],
             third: cyan[400]
+        },
+        customColors: {
+            specialMain: orange[500],
+            specialLight: blueGrey[100],
+            specialAccent: cyan[400],
         },
     },
     typography: {

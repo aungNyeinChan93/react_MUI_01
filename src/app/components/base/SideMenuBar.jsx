@@ -29,7 +29,7 @@ const SideMenuBar = () => {
         >
           MUI Menu
         </Typography>
-        <List component={"ul"} sx={{ width: 200, padding: 0 }}>
+        <List component={"ul"} sx={{ width: 240, padding: 0 }}>
           {menuLists?.map((menu) => {
             return (
               // <ListItem button key={menu.name} component={Link}  to={menu.path}>

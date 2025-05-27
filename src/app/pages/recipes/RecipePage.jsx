@@ -9,6 +9,8 @@ import {
   Rating,
   Stack,
   Button,
+  CardHeader,
+  Avatar,
 } from "@mui/material";
 import { useGetRecipesQuery } from "../../services/recipeData";
 
@@ -63,10 +65,20 @@ const RecipePage = () => {
                     minHeight: "400px",
                   }}
                 >
+                  <CardHeader
+                    avatar={
+                      <Avatar>{recipe?.name?.charAt(0).toUpperCase()}</Avatar>
+                    }
+                    title={
+                      <Typography variant="h6" color="primary.dark">
+                        {recipe.name && recipe.name.substring(0, 20)}
+                      </Typography>
+                    }
+                  ></CardHeader>
                   <CardContent>
-                    <Typography variant="h6" color="primary.dark">
+                    {/* <Typography variant="h6" color="primary.dark">
                       {recipe.name && recipe.name.substring(0, 20)}
-                    </Typography>
+                    </Typography> */}
                     <Typography
                       variant="overline"
                       fontSize={14}
